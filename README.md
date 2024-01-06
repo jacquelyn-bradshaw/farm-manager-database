@@ -19,6 +19,14 @@ Run the create tables sql file.
 mysql < create_tables.sql
 ```
 
+## Insert the data
+
+Run the insert data sql file.
+
+```
+mysql < insert_data.sql
+```
+
 ## MySQL Guidance
 
 Details on how to install mysql and authenticate (if needed).

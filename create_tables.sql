@@ -31,7 +31,7 @@ CREATE TABLE field (
   fieldID VARCHAR(10) NOT NULL PRIMARY KEY,
   name VARCHAR(20) NOT NULL,
   size INT,
-  location VARCHAR(20),
+  location VARCHAR(25),
   cropID VARCHAR(10),
   FOREIGN KEY (cropID) REFERENCES crop(cropID)
 );
@@ -54,8 +54,7 @@ CREATE TABLE crop (
 
 CREATE TABLE supplier (
   supplierID VARCHAR(10) NOT NULL PRIMARY KEY,
-  firstName CHAR(20) NOT NULL,
-  lastName CHAR(20) NOT NULL,
+  name CHAR(30) NOT NULL,
   street VARCHAR(50) NOT NULL,
   city CHAR(20),
   postCode VARCHAR(10) NOT NULL
