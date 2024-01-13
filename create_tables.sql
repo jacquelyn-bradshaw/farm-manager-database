@@ -58,7 +58,7 @@ CREATE TABLE supplier (
   street VARCHAR(50) NOT NULL,
   city CHAR(20),
   postCode VARCHAR(10) NOT NULL
-)
+);
 
 CREATE TABLE farmerSupplierRelation (
   farmerID VARCHAR(10) NOT NULL,
@@ -66,7 +66,7 @@ CREATE TABLE farmerSupplierRelation (
   PRIMARY KEY (farmerID, supplierID),
   FOREIGN KEY (farmerID) REFERENCES farmer(farmerID),
   FOREIGN KEY (supplierID) REFERENCES supplier(supplierID)
-)
+);
 
 CREATE TABLE product (
   productID VARCHAR(10) NOT NULL,
@@ -75,4 +75,4 @@ CREATE TABLE product (
   weight FLOAT(2),
   supplierID VARCHAR(10) NOT NULL,
   FOREIGN KEY (supplierID) REFERENCES supplier(supplierID)
-)
+);
