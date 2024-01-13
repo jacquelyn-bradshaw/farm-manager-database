@@ -27,6 +27,14 @@ Run the insert data sql file.
 mysql < insert_data.sql
 ```
 
+## Create a view to show which farmers drive which tractors
+
+Run the view sql file.
+
+```
+mysql < view.sql
+```
+
 ## MySQL Guidance
 
 Details on how to install mysql and authenticate (if needed).
