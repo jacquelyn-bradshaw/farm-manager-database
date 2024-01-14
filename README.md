@@ -43,6 +43,14 @@ Run the subquery sql file.
 mysql < subquery.sql
 ```
 
+## User defined function to calculate how many farmers each field needs
+
+Run the user defined function sql file.
+
+```
+mysql < user_defined_function.sql
+```
+
 ## MySQL Guidance
 
 Details on how to install mysql and authenticate (if needed).
