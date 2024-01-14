@@ -35,6 +35,14 @@ Run the view sql file.
 mysql < view.sql
 ```
 
+## Query with subquery to find the fields that have the crop wheat planted
+
+Run the subquery sql file.
+
+```
+mysql < subquery.sql
+```
+
 ## MySQL Guidance
 
 Details on how to install mysql and authenticate (if needed).
