@@ -51,6 +51,14 @@ Run the user defined function sql file.
 mysql < user_defined_function.sql
 ```
 
+## An event that runs once a month to delete orders that were placed more than one year ago
+
+Run the event sql file.
+
+```
+mysql < event.sql
+```
+
 ## MySQL Guidance
 
 Details on how to install mysql and authenticate (if needed).
