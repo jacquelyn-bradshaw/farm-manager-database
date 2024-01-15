@@ -60,16 +60,20 @@ CREATE TABLE supplier (
   postCode VARCHAR(10) NOT NULL
 );
 
-CREATE TABLE farmerSupplierRelation (
+CREATE TABLE orders (
+  orderID VARCHAR(10) NOT NULL PRIMARY KEY,
   farmerID VARCHAR(10) NOT NULL,
   supplierID VARCHAR(10) NOT NULL,
-  PRIMARY KEY (farmerID, supplierID),
+  productID VARCHAR(10) NOT NULL,
+  quantity INT,
+  date DATE,
   FOREIGN KEY (farmerID) REFERENCES farmer(farmerID),
-  FOREIGN KEY (supplierID) REFERENCES supplier(supplierID)
+  FOREIGN KEY (supplierID) REFERENCES supplier(supplierID),
+  FOREIGN KEY (productID) REFERENCES product(productID)
 );
 
 CREATE TABLE product (
-  productID VARCHAR(10) NOT NULL,
+  productID VARCHAR(10) NOT NULL PRIMARY KEY,
   name VARCHAR(50) NOT NULL,
   price FLOAT(2),
   weight FLOAT(2),
