@@ -104,23 +104,23 @@ VALUES
 ("S10", "Zaros Machinery", "Unit 4, Moat Farm Workshops", "Hintlesham", "IP8 3QH");
 
 INSERT INTO
-farmerSupplierRelation (farmerID, supplierID)
+orders (orderID, farmerID, supplierID, productID, quantity, date)
 VALUES
-("F1", "S2"),
-("F2", "S3"),
-("F5", "S1"),
-("F5", "S2"),
-("F5", "S3"),
-("F5", "S4"),
-("F5", "S5"),
-("F5", "S6"),
-("F5", "S7"),
-("F5", "S8"),
-("F5", "S9"),
-("F5", "S10"),
-("F6", "S2"),
-("F6", "S5"),
-("F6", "S9");
+("O1", "F1", "S2", "P4", 1, "2021-04-17"),
+("O2", "F2", "S3", "P6", 5, "2021-12-20"),
+("O3", "F5", "S1", "P1", 3, "2022-02-18"),
+("O4", "F5", "S2", "P5", 1, "2022-08-03"),
+("O5", "F5", "S3", "P7", 8, "2022-11-07"),
+("O6", "F5", "S4", "P9", 4, "2023-03-16"),
+("O7", "F5", "S5", "P10", 1, "2023-03-16"),
+("O8", "F5", "S6", "P11", 1, "2023-05-01"),
+("O9", "F5", "S7", "P12", 1, "2023-09-30"),
+("O10", "F5", "S8", "P13", 10, "2023-09-30"),
+("O11", "F5", "S9", "P14", 1, "2023-12-17"),
+("O12", "F5", "S10", "P15", 1, "2024-01-11"),
+("O13", "F6", "S1", "P2", 2, NOW()),
+("O14", "F6", "S1", "P3", 2, NOW()),
+("O15", "F6", "S3", "P8", 30, NOW());
 
 INSERT INTO
 product (productID, name, price, weight, supplierID)
