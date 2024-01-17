@@ -59,6 +59,14 @@ Run the event sql file.
 mysql < event.sql
 ```
 
+## A stored procedure that creates an orders table with the farmers first name, supplier name, product name, quantity and date for each order
+
+Run the stored procedure sql file.
+
+```
+mysql < stored_procedure.sql
+```
+
 ## MySQL Guidance
 
 Details on how to install mysql and authenticate (if needed).
