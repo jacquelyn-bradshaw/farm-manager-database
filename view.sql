@@ -3,12 +3,12 @@ USE farmManager;
 -- View to show which farmers drive which tractors
 CREATE VIEW view_farmerTractorRelations
 AS
-SELECT farmer.firstName,
-farmer.lastName,
-tractor.make,
-tractor.model
+SELECT farmers.firstName AS "Farmer's First Name",
+farmers.lastName AS "Farmer's Last Name",
+tractors.make AS "Tractor Make",
+tractors.model AS "Tractor Model"
 FROM farmerTractorRelation
-INNER JOIN farmer
-ON farmerTractorRelation.farmerID = farmer.farmerID
-INNER JOIN tractor
-ON farmerTractorRelation.tractorID = tractor.tractorID;
+INNER JOIN farmers
+ON farmerTractorRelation.farmerID = farmers.farmerID
+INNER JOIN tractors
+ON farmerTractorRelation.tractorID = tractors.tractorID;
