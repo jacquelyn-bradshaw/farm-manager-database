@@ -1,7 +1,7 @@
 USE farmManager;
 
 INSERT INTO
-farmer (farmerID, firstName, lastName, street, city, postCode, salary)
+farmers (farmerID, firstName, lastName, street, city, postCode, salary)
 VALUES
 ("F1", "George", "Banks", "5 Church Street", "Buxton", "SK17 6HD", 8000),
 ("F2", "Lucy", "Banks", "5 Church Street", "Buxton", "SK17 6HD", 6000),
@@ -13,7 +13,7 @@ VALUES
 ("F8", "Evie", "Franks", "10 Green Lane", "Buxton", "SK17 9DP", 7000);
 
 INSERT INTO
-tractor (tractorID, make, model, age, registrationPlate, power)
+tractors (tractorID, make, model, age, registrationPlate, power)
 VALUES
 ("T1", "New Holland", "T5.120", 2, "MN71 7GH", "117 HP"),
 ("T2", "Massey Ferguson", "6480", 19, "CU04 MHA", "150 HP"),
@@ -44,7 +44,15 @@ VALUES
 ("F8", "T8");
 
 INSERT INTO
-field (fieldID, name, size, location, cropID)
+crops (cropID, type, variety, yield, days)
+VALUES
+("C1", "Wheat", "Durum", "6 to 9 ton/ha", "100 to 130"),
+("C2", "Potato", "Charlotte", "25 to 35 ton/ha", "90 to 120"),
+("C3", "Cabbage", NULL, "25 to 35 ton/ha", "120 to 140"),
+("C4", "Grass", "Ryegrass", "25 ton/ha", "90 to 120");
+
+INSERT INTO
+fields (fieldID, name, size, location, cropID)
 VALUES
 ("FD1", "The Ryegrass", 12, "53.2591°N, 1.9148°W", "C1"),
 ("FD2", "Long Meadow", 10, "53.2581°N, 1.9155°W", "C3"),
@@ -82,15 +90,7 @@ VALUES
 ("F8", "FD10");
 
 INSERT INTO
-crop (cropID, type, variety, yield, days)
-VALUES
-("C1", "Wheat", "Durum", "6 to 9 ton/ha", "100 to 130"),
-("C2", "Potato", "Charlotte", "25 to 35 ton/ha", "90 to 120"),
-("C3", "Cabbage", NULL, "25 to 35 ton/ha", "120 to 140"),
-("C4", "Grass", "Ryegrass", "25 ton/ha", "90 to 120");
-
-INSERT INTO
-supplier (supplierID, name, street, city, postCode)
+suppliers (supplierID, name, street, city, postCode)
 VALUES
 ("S1", "William Eyre & Sons", "Brough Cornmill", "Hope Valley", "S33 9NG"),
 ("S2", "Wardmans Ltd", "Old Coach Road", "Matlock", "DE4 5FY"),
@@ -102,6 +102,25 @@ VALUES
 ("S8", "Abbeydale Direct", "Unit 2 New Haden Industrial Estate", "Cheadle", "ST10 2NP"),
 ("S9", "Howard & Sons", "Manor Farm", "Devizes", "SN10 5SQ"),
 ("S10", "Zaros Machinery", "Unit 4, Moat Farm Workshops", "Hintlesham", "IP8 3QH");
+
+INSERT INTO
+products (productID, name, price, weight, supplierID)
+VALUES
+("P1", "Waterproof overalls", 19.95, 0.50, "S1"),
+("P2", "Waterproof jacket", 32.95, 0.50, "S1"),
+("P3", "Lined boot", 160.00, 1.00, "S1"),
+("P4", "Grain trailer", 8500.00, NULL, "S2"),
+("P5", "Rotary muck spreader", 4600.00, NULL, "S2"),
+("P6", "Wheat seeds", 975.00, 100.00, "S3"),
+("P7", "Potato seeds", 199.90, 50.00, "S3"),
+("P8", "Cabbage seeds", 24.90, NULL, "S3"),
+("P9", "Grass seeds", 75.00, 25.00, "S4"),
+("P10", "CLASS 540RF Baler", 23000.00, NULL, "S5"),
+("P11", "ELHO V-Twin 600 Swather", 4750.00, NULL, "S6"),
+("P12", "Bale spike", 495.00, 35.00, "S7"),
+("P13", "Tractor seat covers", 31.03, NULL, "S8"),
+("P14", "Crop sprayer", 1495.00, NULL, "S9"),
+("P15", "Mower", 1300.00, 260.00, "S10");
 
 INSERT INTO
 orders (orderID, farmerID, supplierID, productID, quantity, date)
@@ -121,22 +140,3 @@ VALUES
 ("O13", "F6", "S1", "P2", 2, NOW()),
 ("O14", "F6", "S1", "P3", 2, NOW()),
 ("O15", "F6", "S3", "P8", 30, NOW());
-
-INSERT INTO
-product (productID, name, price, weight, supplierID)
-VALUES
-("P1", "Waterproof overalls", 19.95, 0.50, "S1"),
-("P2", "Waterproof jacket", 32.95, 0.50, "S1"),
-("P3", "Lined boot", 160.00, 1.00, "S1"),
-("P4", "Grain trailer", 8500.00, NULL, "S2"),
-("P5", "Rotary muck spreader", 4600.00, NULL, "S2"),
-("P6", "Wheat seeds", 975.00, 100.00, "S3"),
-("P7", "Potato seeds", 199.90, 50.00, "S3"),
-("P8", "Cabbage seeds", 24.90, NULL, "S3"),
-("P9", "Grass seeds", 75.00, 25.00, "S4"),
-("P10", "CLASS 540RF Baler", 23000.00, NULL, "S5"),
-("P11", "ELHO V-Twin 600 Swather", 4750.00, NULL, "S6"),
-("P12", "Bale spike", 495.00, 35.00, "S7"),
-("P13", "Tractor seat covers", 31.03, NULL, "S8"),
-("P14", "Crop sprayer", 1495.00, NULL, "S9"),
-("P15", "Mower", 1300.00, 260.00, "S10");
