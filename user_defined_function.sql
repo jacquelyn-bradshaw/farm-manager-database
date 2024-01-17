@@ -18,5 +18,7 @@ DELIMITER ;
 
 /* Use the number_of_farmers_needed function on the field
 table to show how many farmers each field needs */
-SELECT name, size, number_of_farmers_needed(size)
-FROM field;
+SELECT name AS "Field name",
+size AS "Field size",
+number_of_farmers_needed(size) AS "Number of farmers needed"
+FROM fields;
