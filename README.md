@@ -67,6 +67,14 @@ Run the stored procedure sql file.
 mysql < stored_procedure.sql
 ```
 
+## A trigger before insert on the farmers table to correctly format strings
+
+Run the trigger sql file.
+
+```
+mysql < trigger.sql
+```
+
 ## MySQL Guidance
 
 Details on how to install mysql and authenticate (if needed).
