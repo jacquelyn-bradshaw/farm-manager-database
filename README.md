@@ -3,6 +3,10 @@
 A database to enable farmers to manage their farm, the tractors that they own, what crops are planted in which fields and which suppliers stock each product they need.
 SQL files and commands to create a database and tables and insert data.
 
+## EER diagram
+
+Diagram showing the table relations in the farm manager database
+
 ## Create the database
 
 Run the create database sql file.
@@ -73,6 +77,14 @@ Run the trigger sql file.
 
 ```
 mysql < trigger.sql
+```
+
+## Query with group by and having to show which supplier names more than two orders have been placed with
+
+Run the group by having sql file.
+
+```
+mysql < group_by_having.sql
 ```
 
 ## MySQL Guidance
