@@ -39,8 +39,8 @@ CropType
 FROM view_farmerFieldCropRelations
 HAVING FarmersLastName = "Banks";
 
-/* Order the data in the view first by farmers first name then
-by farmers last name */
+/* Order the data in the view first by farmers last name then
+by farmers first name */
 SELECT
 FarmersFirstName,
 FarmersLastName,
